@@ -42,7 +42,7 @@
 | **Backend** | Node.js + Express.js | Modular REST API server |
 | **Authentication** | JWT (jsonwebtoken) + bcryptjs | Secure stateless authentication |
 | **Database** | MongoDB + Mongoose | Document database with relational indexes |
-| **LLM & Embeddings** | Google Gemini (`gemini-2.5-flash` / `gemini-embedding-001`) | Semantic embedding generation and RAG chat |
+| **LLM & Embeddings** | Google Gemini (`gemini-3.5-flash` / `gemini-embedding-001`) | Semantic embedding generation and RAG chat |
 | **Vector Search** | In-Database / Cosine Similarity | Authenticated user-isolated vector similarity search |
 | **Scheduling** | node-cron | Automated background period reminder checks |
 | **Email** | Nodemailer | Transactional reminder notifications |
@@ -86,93 +86,6 @@
              MongoDB
 ```
 
----
-
-## 📂 Project Structure
-
-```text
-herflow/
-├── backend/
-│   ├── config/
-│   │   └── db.js                    # MongoDB Mongoose connection
-│   ├── controllers/
-│   │   ├── authController.js        # Register, login, profile, preferences
-│   │   ├── periodController.js      # Period CRUD operations
-│   │   ├── flowController.js        # Daily flow CRUD operations
-│   │   ├── insightController.js     # Computed analytics & chart datasets
-│   │   ├── predictionController.js  # Prediction & fertility status
-│   │   └── aiController.js          # RAG chat handler
-│   ├── middleware/
-│   │   └── authMiddleware.js        # JWT verification middleware
-│   ├── models/
-│   │   ├── User.js                  # User schema with bcrypt pre-save
-│   │   ├── Period.js                # Period schema with compound index
-│   │   ├── DailyFlow.js             # Flow schema (date + intensity 0-3)
-│   │   ├── CycleInsight.js          # Aggregate cycle metrics
-│   │   └── Embedding.js             # User-isolated semantic embeddings
-│   ├── routes/
-│   │   ├── authRoutes.js            # /api/auth
-│   │   ├── periodRoutes.js          # /api/periods
-│   │   ├── flowRoutes.js            # /api/flows
-│   │   ├── insightRoutes.js         # /api/insights
-│   │   ├── predictionRoutes.js      # /api/predictions
-│   │   └── aiRoutes.js              # /api/ai
-│   ├── services/
-│   │   ├── cycleService.js          # Statistical calculations & cycle logic
-│   │   ├── insightService.js        # User insight aggregation & datasets
-│   │   ├── embeddingService.js      # Gemini embeddings & vector similarity
-│   │   ├── aiService.js             # RAG prompt construction & Gemini LLM
-│   │   ├── emailService.js          # Nodemailer transporter & HTML email
-│   │   └── cronService.js           # node-cron scheduler (daily check)
-│   ├── utils/
-│   │   └── math.js                  # Cosine similarity & standard deviation
-│   ├── .env.example
-│   ├── package.json
-│   └── server.js                    # Express app entry point
-│
-├── frontend/
-│   ├── public/
-│   │   └── favicon.svg              # HerFlow SVG brand icon
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Navbar.jsx           # Responsive desktop/mobile nav with active pill
-│   │   │   ├── ProtectedRoute.jsx   # Route auth guard
-│   │   │   ├── CircularProgressBar.jsx # Animated SVG circular phase gauge
-│   │   │   ├── LineChart.jsx        # Chart.js period duration trend chart
-│   │   │   ├── FlowChart.jsx        # Chart.js stacked flow intensity chart
-│   │   │   └── AuroraText.jsx       # Animated gradient text effect
-│   │   ├── context/
-│   │   │   └── AuthContext.jsx      # React auth context & token management
-│   │   ├── pages/
-│   │   │   ├── LandingPage.jsx      # Parallax hero, feature cards, CTAs
-│   │   │   ├── LoginPage.jsx        # Dual-mode Sign In / Register card
-│   │   │   ├── DashboardPage.jsx    # Period tracking, flow logging, cycle calendar
-│   │   │   ├── InsightsPage.jsx     # Pro metrics, phase gauge, charts
-│   │   │   ├── ClarityPage.jsx      # Interactive Gemini RAG AI chat
-│   │   │   └── NotFoundPage.jsx     # 404 page
-│   │   ├── services/
-│   │   │   └── api.js               # Axios client with JWT interceptor
-│   │   ├── App.jsx                  # Main router config
-│   │   ├── index.css                # Tailwind CSS and theme tokens
-│   │   └── main.jsx                 # React root render
-│   ├── index.html
-│   ├── package.json
-│   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   └── vite.config.js
-│
-├── package.json                     # Workspace orchestration script
-└── README.md
-```
-
-## 💻 Getting Started
-
-### 1. Prerequisites
-* [Node.js](https://nodejs.org/) (v18 or higher)
-* [MongoDB](https://www.mongodb.com/) (Local instance or MongoDB Atlas URI)
-* [Google Gemini API Key](https://aistudio.google.com/)
-
----
 
 ### 2. Backend Setup
 1. Navigate to the `backend` directory:
