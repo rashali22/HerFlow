@@ -64,17 +64,11 @@ HerFlow includes an AI assistant called **"Clarity with HerFlow"**.
 The AI assistant follows these steps:
 
 1. **User asks a question**
-   ↓
 2. **Relevant user data is retrieved**
-   ↓
 3. **Data is converted into embeddings**
-   ↓
 4. **Cosine similarity** is used to find the most relevant information
-   ↓
 5. The relevant information is added as **context**
-   ↓
 6. **Google Gemini** generates the response
-   ↓
 7. **Personalized AI answer**
 
 RAG allows the AI assistant to use relevant information from the user's data when generating responses.
