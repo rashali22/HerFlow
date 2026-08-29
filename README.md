@@ -99,7 +99,7 @@ Personalized AI answer
 
 ## 🏗️ Project Structure
 
-```text
+
 HerFlow/
 │
 ├── frontend/
