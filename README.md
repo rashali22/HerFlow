@@ -114,3 +114,89 @@ HerFlow/
 │   └── config/
 │
 └── README.md
+
+## ⚙️ Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repository-url>
+cd HerFlow
+```
+
+### 2. Backend Setup
+
+Navigate to the backend folder:
+
+```bash
+cd backend
+```
+
+Install the required dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file inside the `backend` folder:
+
+```env
+PORT=5000
+NODE_ENV=development
+MONGODB_URI=mongodb://localhost:27017/herflow
+JWT_SECRET=your_secret_jwt_key_here
+GEMINI_API_KEY=your_google_gemini_api_key_here
+FRONTEND_URL=http://localhost:5173
+```
+
+Start the backend server:
+
+```bash
+npm run dev
+```
+
+The backend will run on:
+
+```text
+http://localhost:5000
+```
+
+### 3. Frontend Setup
+
+Open a new terminal and navigate to the frontend folder:
+
+```bash
+cd frontend
+```
+
+Install the required dependencies:
+
+```bash
+npm install
+```
+
+Start the frontend:
+
+```bash
+npm run dev
+```
+
+The frontend will run on:
+
+```text
+http://localhost:5173
+```
+
+### 4. Run the Application
+
+Make sure both the frontend and backend servers are running:
+
+```text
+Frontend → http://localhost:5173
+Backend  → http://localhost:5000
+```
+
+Open the frontend URL in your browser to use HerFlow.
+
+---
+
