@@ -58,24 +58,26 @@ HerFlow includes an AI assistant called **"Clarity with HerFlow"**.
 
 ---
 
+
 ## 🧠 RAG Pipeline
 
-The AI assistant follows this basic flow:
+The AI assistant follows these steps:
 
-```text
-User asks a question
-        ↓
-Relevant user data is retrieved
-        ↓
-Data is converted into embeddings
-        ↓
-Cosine similarity finds relevant information
-        ↓
-Relevant context is added to the prompt
-        ↓
-Google Gemini generates the response
-        ↓
-Personalized AI answer
+1. **User asks a question**
+   ↓
+2. **Relevant user data is retrieved**
+   ↓
+3. **Data is converted into embeddings**
+   ↓
+4. **Cosine similarity** is used to find the most relevant information
+   ↓
+5. The relevant information is added as **context**
+   ↓
+6. **Google Gemini** generates the response
+   ↓
+7. **Personalized AI answer**
+
+RAG allows the AI assistant to use relevant information from the user's data when generating responses.
 
 ---
 
@@ -99,7 +101,7 @@ Personalized AI answer
 
 ## 🏗️ Project Structure
 
-
+```text
 HerFlow/
 │
 ├── frontend/
@@ -114,6 +116,9 @@ HerFlow/
 │   └── config/
 │
 └── README.md
+```
+
+---
 
 ## ⚙️ Setup
 
@@ -132,7 +137,7 @@ Navigate to the backend folder:
 cd backend
 ```
 
-Install the required dependencies:
+Install the dependencies:
 
 ```bash
 npm install
@@ -169,7 +174,7 @@ Open a new terminal and navigate to the frontend folder:
 cd frontend
 ```
 
-Install the required dependencies:
+Install the dependencies:
 
 ```bash
 npm install
@@ -189,14 +194,9 @@ http://localhost:5173
 
 ### 4. Run the Application
 
-Make sure both the frontend and backend servers are running:
+Make sure both servers are running:
 
-```text
-Frontend → http://localhost:5173
-Backend  → http://localhost:5000
-```
+- **Frontend:** `http://localhost:5173`
+- **Backend:** `http://localhost:5000`
 
-Open the frontend URL in your browser to use HerFlow.
-
----
-
+Open the frontend URL in your browser.
