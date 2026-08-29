@@ -19,21 +19,13 @@ It combines cycle calculations, period predictions, data visualization, and a RA
 
 - Add current and previous period dates
 - Automatically calculate period duration
-- Log daily flow levels:
-  - None
-  - Light
-  - Medium
-  - Heavy
+- Log daily flow levels
 
 ### 📊 Cycle Analysis & Prediction
 
 - Calculate average cycle length from previous cycles
 - Predict the approximate date of the next period
-- Identify different cycle phases:
-  - Menstrual
-  - Follicular
-  - Ovulation
-  - Luteal
+- Identify different cycle phases
 - Estimate the fertility window
 - Calculate cycle regularity and variation
 - Generate basic rule-based health observations
